@@ -1,0 +1,48 @@
+{
+  "name": "readuse",
+  "version": "0.0.0",
+  "description": "A simple CSS framework for making functional designs",
+  "author": {
+    "name": "Toheeb Ogunbiyi",
+    "email": "toogunbiyi@gmail.com",
+    "url": "https://www.toheeb.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toheeb/readuse/labels/bug"
+  },
+  "homepage": "https://github.com/toheeb/readuse#readme",
+  "main": "src/readuse.sass",
+  "style": "readuse/dist/css/readuse.min.css",
+  "unpkg": "dist/css/readuse.min.css",
+  "jsdelivr": "dist/css/readuse.min.css",
+  "scripts": {
+    "start": "npm run build-sass -- -watch",
+    "deploy": "npm run clean && npm run build",
+    "clean": "rimraf dist",
+    "build": "npm run build-sass && npm run build-cleancss",
+    "build-sass": "sass src/readuse.sass dist/css/readuse.css",
+    "build-cleancss": "cleancss -o dist/css/readuse.min.css dist/css/readuse.css",
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toheeb/readuse.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework",
+    "responsive"
+  ],
+  "files": [
+    "dist/css",
+    "src/readuse.sass",
+    "README.md"
+  ],
+  "devDependencies": {
+    "clean-css-cli": "^5.3.3",
+    "rimraf": "^3.0.2",
+    "sass": "^1.42.1"
+  }
+}
